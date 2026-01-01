@@ -1,0 +1,9 @@
+import "./blocks/video-gallery-block";
+import "./blocks/video-testimonial-section";
+import "./blocks/video-slider";
+import "./blocks/parallax-row-video-gallery";
+import "./blocks/slider-autoplay-video";
+import "./blocks/lightbox-video-gallery";
+import "./blocks/masonry-video-grid-one";
+import "./blocks/video-playlist-gallery";
+import "./blocks/video-carousel-gallery";

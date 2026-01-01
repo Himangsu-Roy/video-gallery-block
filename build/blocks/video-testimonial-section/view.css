@@ -1,0 +1,82 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../plugin-slug/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!../plugin-slug/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!../plugin-slug/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/video-testimonial-section/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-vts-video-testimonial-section * {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 16px;
+  font-family: system-ui;
+}
+.wp-block-vts-video-testimonial-section .vp-container {
+  margin: 0 auto;
+}
+.wp-block-vts-video-testimonial-section .vp-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.wp-block-vts-video-testimonial-section .vp-header .vp-heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+.wp-block-vts-video-testimonial-section .vp-header .vp-subheading {
+  font-size: 1.25rem;
+  color: #4b5563;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.wp-block-vts-video-testimonial-section .vp-grid {
+  display: grid;
+}
+.wp-block-vts-video-testimonial-section .vp-card {
+  overflow: hidden;
+}
+.wp-block-vts-video-testimonial-section .vp-video-wrapper {
+  position: relative;
+}
+.wp-block-vts-video-testimonial-section .vp-video {
+  width: 100%;
+}
+.wp-block-vts-video-testimonial-section .vp-controls-overlay {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+}
+.wp-block-vts-video-testimonial-section .vp-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.wp-block-vts-video-testimonial-section .vp-controls .vp-skip {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+}
+.wp-block-vts-video-testimonial-section .vp-controls .vp-play-button {
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wp-block-vts-video-testimonial-section .vp-progress {
+  -webkit-appearance: none;
+  width: 100%;
+  border-radius: 2px;
+  outline: none;
+}
+.wp-block-vts-video-testimonial-section .vp-progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+.wp-block-vts-video-testimonial-section .vp-progress::-moz-range-thumb {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=view.css.map*/

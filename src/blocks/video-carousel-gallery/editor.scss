@@ -1,0 +1,32 @@
+$primaryColor: #4527a4;
+
+.bBlocksInspectorInfo {
+  padding: 6px;
+
+  a {
+    text-decoration: none;
+    font-weight: 700;
+  }
+}
+
+.wp-block-vcg-video-carousel-gallery {
+  .selectHelp {
+    color: #616063;
+  }
+}
+
+// .components-dropdown-menu__popover
+//   .components-popover__content
+//   .components-dropdown-menu__menu
+//   .components-menu-group
+//   [type="button"]:first-child {
+//   display: none;
+// }
+
+.components-button.components-autocomplete__result.block-editor-autocompleters__block.is-selected {
+  color: #fff;
+  .vcg-video-carousel-icon {
+    fill: #fff !important;
+    stroke: #fff !important;
+  }
+}

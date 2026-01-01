@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "vgb/video-gallery",
+  "version": "1.1.1",
+  "title": "Video Gallery",
+  "category": "widgets",
+  "description": "Display your videos as gallery in a professional way.",
+  "keywords": [
+    "video gallery block",
+    "media showcase",
+    "visual content",
+    "embedded video",
+    "professional presentation"
+  ],
+  "textdomain": "video-gallery",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "html": false
+  },
+  "example": {
+    "attributes": {}
+  },
+  "editorScript": ["file:./index.js", "wp-api"],
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-view.css",
+  "render": "file:./render.php",
+  "viewScript": ["file:./view.js", "react", "react-dom"]
+}

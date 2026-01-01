@@ -1,0 +1,529 @@
+{
+  "apiVersion": 2,
+  "name": "prvg/parallax-row-video-gallery",
+  "version": "1.0.0",
+  "title": "Parallax Row Video Gallery",
+  "category": "videoblocks",
+  "description": "Creates stunning parallax rows with embedded video galleries for dynamic, modern page layouts.",
+  "keywords": [
+    "parallax",
+    "row",
+    "video",
+    "gallery"
+  ],
+  "textdomain": "parallax-row-video-gallery",
+  "attributes": {
+    "alignment": {
+      "type": "string",
+      "default": "center"
+    },
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "albums": {
+      "type": "array",
+      "default": []
+    },
+    "videos": {
+      "type": "array",
+      "default": [
+        [
+          {
+            "id": "pachinko",
+            "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+            "poster": "https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Title 1",
+            "subtitle": "Subtitle 1"
+          },
+          {
+            "id": "usher",
+            "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+            "poster": "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Title 2",
+            "subtitle": "Subtitle 2"
+          },
+          {
+            "id": "documentary",
+            "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+            "poster": "https://images.pexels.com/photos/2599537/pexels-photo-2599537.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Title 3",
+            "subtitle": "Subtitle 3"
+          },
+          {
+            "id": "presumed",
+            "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+            "poster": "https://images.pexels.com/photos/5938567/pexels-photo-5938567.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Title 4",
+            "subtitle": "Subtitle 4"
+          },
+          {
+            "id": "maritime",
+            "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+            "poster": "https://images.pexels.com/photos/8728556/pexels-photo-8728556.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Title 5",
+            "subtitle": "Subtitle 5"
+          },
+          {
+            "id": "phoenix",
+            "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+            "poster": "https://images.pexels.com/photos/2422915/pexels-photo-2422915.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Title 6",
+            "subtitle": "Subtitle 6"
+          }
+        ],
+        [
+          {
+            "id": "jennifer",
+            "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+            "poster": "https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Title 1",
+            "subtitle": "Subtitle 1"
+          },
+          {
+            "id": "angrybirds",
+            "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+            "poster": "https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Title 2",
+            "subtitle": "Subtitle 2"
+          },
+          {
+            "id": "western",
+            "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Subaru.mp4",
+            "poster": "https://images.pexels.com/photos/2906064/pexels-photo-2906064.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Title 3",
+            "subtitle": "Subtitle 3"
+          },
+          {
+            "id": "icespice",
+            "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+            "poster": "https://images.pexels.com/photos/1845534/pexels-photo-1845534.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Title 4",
+            "subtitle": "Subtitle 4"
+          },
+          {
+            "id": "dreamlight",
+            "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4",
+            "poster": "https://images.pexels.com/photos/3244513/pexels-photo-3244513.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Title 5",
+            "subtitle": "Subtitle 5"
+          },
+          {
+            "id": "badboys",
+            "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
+            "poster": "https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Title 6",
+            "subtitle": "Subtitle 6"
+          }
+        ],
+        [
+          {
+            "id": "drama",
+            "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+            "poster": "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Title 1",
+            "subtitle": "Subtitle 1"
+          },
+          {
+            "id": "animated",
+            "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+            "poster": "https://images.pexels.com/photos/163016/bitcoin-cryptocurrency-digital-currency-money-163016.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Title 2",
+            "subtitle": "Subtitle 2"
+          },
+          {
+            "id": "horror",
+            "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+            "poster": "https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Title 3",
+            "subtitle": "Subtitle 3"
+          },
+          {
+            "id": "family",
+            "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+            "poster": "https://images.pexels.com/photos/163036/mario-luigi-figures-funny-163036.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Title 4",
+            "subtitle": "Subtitle 4"
+          },
+          {
+            "id": "silo",
+            "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+            "poster": "https://images.pexels.com/photos/2422915/pexels-photo-2422915.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Title 5",
+            "subtitle": "Subtitle 5"
+          },
+          {
+            "id": "music",
+            "video": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+            "poster": "https://images.pexels.com/photos/1751731/pexels-photo-1751731.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "title": "Title 6",
+            "subtitle": "Subtitle 6"
+          }
+        ]
+      ]
+    },
+    "gallery": {
+      "type": "object",
+      "default": {
+        "background": {
+          "show": true,
+          "color": "#000"
+        },
+        "padding": {
+          "desktop": {
+            "top": "0rem",
+            "bottom": "0rem",
+            "left": "0rem",
+            "right": "0rem"
+          },
+          "tablet": {
+            "top": "0rem",
+            "bottom": "0rem",
+            "left": "0rem",
+            "right": "0rem"
+          },
+          "mobile": {
+            "top": "0rem",
+            "bottom": "0rem",
+            "left": "0rem",
+            "right": "0rem"
+          }
+        },
+        "border": {
+          "show": false,
+          "color": "#000",
+          "width": 0,
+          "style": "solid"
+        },
+        "borderRadius": {
+          "desktop": {
+            "top": "0px",
+            "right": "0px",
+            "left": "0px",
+            "bottom": "0px"
+          },
+          "tablet": {
+            "top": "0px",
+            "right": "0px",
+            "left": "0px",
+            "bottom": "0px"
+          },
+          "mobile": {
+            "top": "0px",
+            "right": "0px",
+            "left": "0px",
+            "bottom": "0px"
+          }
+        },
+        "shadow": [
+          {
+            "hOffset": "0px",
+            "vOffset": "0px",
+            "blur": "0px",
+            "spreed": "0px",
+            "color": "rgba(0, 0, 0, 0.1)",
+            "isInset": false
+          }
+        ],
+        "columns": {
+          "desktop": 0,
+          "tablet": 3,
+          "mobile": 1
+        },
+        "columnGap": {
+          "desktop": 16,
+          "tablet": 15,
+          "mobile": 15
+        },
+        "rowGap": {
+          "desktop": 0,
+          "tablet": 0,
+          "mobile": 0
+        },
+        "orientation": "horizontal"
+      }
+    },
+    "items": {
+      "type": "object",
+      "default": {
+        "hoverScaleEffect": 1.05,
+        "shadow": [
+          {
+            "hOffset": "0px",
+            "vOffset": "4px",
+            "blur": "12px",
+            "spreed": "0px",
+            "color": "#0000004d",
+            "isInset": false
+          }
+        ],
+        "hoverShadow": [
+          {
+            "hOffset": "0px",
+            "vOffset": "20px",
+            "blur": "25px",
+            "spreed": "-5px",
+            "color": "rgba(0, 0, 0, 0.1)",
+            "isInset": false
+          }
+        ],
+        "playBtn": {
+          "show": true,
+          "bgColor": "rgba(255, 255, 255, 0.2)",
+          "bgHoverColor": "rgba(255, 255, 255, 0.3)",
+          "iconStrokeColor": "#fff",
+          "iconFillColor": "#FFFFFF00",
+          "blur": "6px",
+          "size": {
+            "desktop": "4rem",
+            "tablet": "4rem",
+            "mobile": "4rem"
+          },
+          "iconSize": {
+            "desktop": "2rem",
+            "tablet": "2rem",
+            "mobile": "2rem"
+          },
+          "borderRadius": {
+            "top": "50%",
+            "right": "50%",
+            "left": "50%",
+            "bottom": "50%"
+          },
+          "scaleEffect": 1.1,
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-play\" aria-hidden=\"true\"><polygon points=\"6 3 20 12 6 21 6 3\"></polygon></svg>"
+        },
+        "controls": {
+          "show": true,
+          "bgColor": "rgba(0, 0, 0, 0.5)",
+          "bgHoverColor": "rgba(0, 0, 0, 0.7)",
+          "iconStrokeColor": "#fff",
+          "iconFillColor": "#FFFFFF00",
+          "blur": "6px",
+          "position": {
+            "vertical": {
+              "desktop": "1rem",
+              "tablet": "1rem",
+              "mobile": "1rem"
+            },
+            "horizontal": {
+              "desktop": "1rem",
+              "tablet": "1rem",
+              "mobile": "1rem"
+            }
+          },
+          "direction": "row",
+          "size": {
+            "desktop": "2rem",
+            "tablet": "2rem",
+            "mobile": "2rem"
+          },
+          "iconSize": {
+            "desktop": "1rem",
+            "tablet": "1rem",
+            "mobile": "1rem"
+          },
+          "borderRadius": {
+            "top": "50%",
+            "right": "50%",
+            "left": "50%",
+            "bottom": "50%"
+          },
+          "gap": {
+            "desktop": "0.5rem",
+            "tablet": "0.5rem",
+            "mobile": "0.5rem"
+          },
+          "progress": {
+            "height": "4px",
+            "bgColor": "rgba(255, 255, 255, 0.2)",
+            "barColor": "#fff"
+          }
+        },
+        "overlayColor": "rgba(0, 0, 0, 0.4)",
+        "bottomOverlayColor": "rgba(0, 0, 0, 0.8)",
+        "border": {
+          "show": false,
+          "color": "#000",
+          "width": 1,
+          "style": "solid"
+        },
+        "borderRadius": {
+          "desktop": {
+            "top": "12px",
+            "right": "12px",
+            "left": "12px",
+            "bottom": "12px"
+          },
+          "tablet": {
+            "top": "12px",
+            "right": "12px",
+            "left": "12px",
+            "bottom": "12px"
+          },
+          "mobile": {
+            "top": "12px",
+            "right": "12px",
+            "left": "12px",
+            "bottom": "12px"
+          }
+        },
+        "info": {
+          "title": {
+            "show": true,
+            "color": "#fff",
+            "typography": {
+              "fontSize": {
+                "desktop": 18,
+                "tablet": 18,
+                "mobile": 18
+              },
+              "fontWeight": "600",
+              "lineHeight": 1.2
+            },
+            "margin": {
+              "desktop": {
+                "top": "0px",
+                "bottom": "4px",
+                "left": "0px",
+                "right": "0px"
+              },
+              "tablet": {
+                "top": "0px",
+                "bottom": "4px",
+                "left": "0px",
+                "right": "0px"
+              },
+              "mobile": {
+                "top": "0px",
+                "bottom": "4px",
+                "left": "0px",
+                "right": "0px"
+              }
+            }
+          },
+          "subtitle": {
+            "show": true,
+            "color": "#d1d5db",
+            "typography": {
+              "fontSize": {
+                "desktop": 14,
+                "tablet": 14,
+                "mobile": 14
+              },
+              "fontWeight": "500",
+              "lineHeight": 1
+            },
+            "margin": {
+              "desktop": {
+                "top": "0px",
+                "bottom": "0px",
+                "left": "0px",
+                "right": "0px"
+              },
+              "tablet": {
+                "top": "0px",
+                "bottom": "0px",
+                "left": "0px",
+                "right": "0px"
+              },
+              "mobile": {
+                "top": "0px",
+                "bottom": "0px",
+                "left": "0px",
+                "right": "0px"
+              }
+            }
+          },
+          "padding": {
+            "desktop": {
+              "top": "16px",
+              "bottom": "16px",
+              "left": "16px",
+              "right": "16px"
+            },
+            "tablet": {
+              "top": "16px",
+              "bottom": "16px",
+              "left": "16px",
+              "right": "16px"
+            },
+            "mobile": {
+              "top": "16px",
+              "bottom": "16px",
+              "left": "16px",
+              "right": "16px"
+            }
+          },
+          "textShadow": [
+            {
+              "hOffset": "0px",
+              "vOffset": "1px",
+              "blur": "4px",
+              "color": "rgba(0, 0, 0, 0.8)"
+            }
+          ]
+        },
+        "padding": {
+          "desktop": {
+            "top": "1rem",
+            "bottom": "1rem",
+            "left": "0rem",
+            "right": "0rem"
+          },
+          "tablet": {
+            "top": "1rem",
+            "bottom": "1rem",
+            "left": "0rem",
+            "right": "0rem"
+          },
+          "mobile": {
+            "top": "1rem",
+            "bottom": "1rem",
+            "left": "0rem",
+            "right": "0rem"
+          }
+        },
+        "gap": {
+          "desktop": "16px",
+          "tablet": "16px",
+          "mobile": "16px"
+        },
+        "video": {
+          "objectFit": "cover",
+          "lightbox": true,
+          "minWidth": {
+            "desktop": "260px",
+            "tablet": "260px",
+            "mobile": "260px"
+          },
+          "maxWidth": {
+            "desktop": "none",
+            "tablet": "none",
+            "mobile": "none"
+          },
+          "height": {
+            "desktop": "160px",
+            "tablet": "160px",
+            "mobile": "160px"
+          }
+        }
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {}
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./view.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

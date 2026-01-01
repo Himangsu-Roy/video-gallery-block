@@ -1,0 +1,675 @@
+$primaryColor: #4527a4;
+
+.wp-block-prvg-parallax-row-video-gallery {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .parallax-gallery {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .parallax-row {
+    position: relative;
+    // padding: 1rem 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    display: flex;
+    flex-grow: 1;
+
+    .video-track {
+      display: flex;
+      flex-grow: 1;
+      transition: transform 0.075s ease-out;
+      will-change: transform;
+    }
+
+    .video-wrapper {
+      display: flex;
+      flex: 1;
+    }
+  }
+
+  .video-player {
+    position: relative;
+    // width: 18rem;
+    // height: 10rem;
+    // border-radius: 0.75rem;
+    overflow: hidden;
+    cursor: pointer;
+    transform: scale(1);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    flex-shrink: 0;
+    flex: 1;
+    // min-width: 280px;
+    // max-width: 0px;
+    // max-width: none;
+
+    &.hovered {
+      // transform: scale(1.05);
+    }
+
+    .video-element {
+      width: 100%;
+      height: 100%;
+      // object-fit: cover;
+    }
+
+    .video-gradient {
+      position: absolute;
+      inset: 0;
+      // background: linear-gradient(
+      //   to top,
+      //   rgba(0, 0, 0, 0.8),
+      //   transparent,
+      //   transparent
+      // );
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      // background-color: rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+
+      &.visible {
+        opacity: 1;
+      }
+
+      .overlay-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        .play-button {
+          // width: 4rem;
+          // height: 4rem;
+          // background-color: rgba(255, 255, 255, 0.2);
+          // backdrop-filter: blur(6px);
+          // border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition:
+            background 0.3s ease,
+            transform 0.3s ease;
+          z-index: 1;
+
+          &:hover {
+            // background-color: rgba(255, 255, 255, 0.3);
+            // transform: scale(1.1);
+          }
+
+          .icon {
+            // width: 2rem;
+            // height: 2rem;
+            // color: white;
+
+            &.play-offset {
+              margin-left: 0.25rem;
+            }
+          }
+        }
+      }
+    }
+
+    .info {
+      position: absolute;
+      left: 0;
+      right: 0;
+      // padding: 1rem;
+      transition: all 0.5s ease-in-out;
+
+      &.visible {
+        top: 0;
+        opacity: 1;
+      }
+
+      &.hidden {
+        bottom: 0;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .title {
+        // color: white;
+        // font-weight: bold;
+        // font-size: 1.125rem;
+        // margin-bottom: 0.25rem;
+        // line-height: 1.2;
+        // text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+      }
+
+      .subtitle {
+        padding: 0;
+        // color: #d1d5db;
+        // font-size: 0.875rem;
+        // font-weight: 500;
+        // text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+      }
+    }
+
+    .controls {
+      position: absolute;
+      // top: 1rem;
+      // right: 1rem;
+      display: flex;
+      // gap: 0.5rem;
+
+      .control-button {
+        // width: 2rem;
+        // height: 2rem;
+        // background-color: rgba(0, 0, 0, 0.5);
+        // backdrop-filter: blur(6px);
+        border: none;
+        // border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+          // background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .icon-small {
+          // width: 1rem;
+          // height: 1rem;
+          // color: white;
+        }
+      }
+    }
+
+    .progress-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      // height: 0.25rem;
+      cursor: pointer;
+
+      .progress-bg {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        // background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .progress-bar {
+        height: 100%;
+        // background-color: white;
+        transition: width 0.1s ease-out;
+        z-index: 1;
+      }
+    }
+
+    .live-indicator {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+
+      .dot {
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: red;
+        border-radius: 50%;
+        animation: pulse 1.5s infinite;
+      }
+
+      span {
+        color: white;
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+  }
+
+  // ?Lightbox
+  .parallax-wrapper {
+    position: relative;
+  }
+
+  .lightbox-wrapper {
+    position: fixed;
+  }
+
+  .lightbox-overlay {
+    position: fixed;
+    // position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+
+  .lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  .lightbox-video {
+    width: 100%;
+    max-height: 80vh;
+    background: #000;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #fff;
+    color: #000;
+    border: none;
+    font-size: 1.5rem;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // !
+
+  // .video-lightbox {
+  //   backdrop-filter: blur(6px);
+  //   transition: all 0.3s ease;
+  // }
+
+  // .video-lightbox video {
+  //   outline: none;
+  //   border: 2px solid rgba(255, 255, 255, 0.2);
+  // }
+
+  // !
+  // .video-lightbox {
+  //   position: fixed;
+  //   inset: 0;
+  //   z-index: 50;
+  //   background: rgba(0, 0, 0, 0.9);
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   backdrop-filter: blur(6px);
+  //   transition: all 0.3s ease;
+
+  //   button {
+  //     position: absolute;
+  //     top: 1rem; // Tailwind top-4
+  //     right: 1rem; // right-4
+  //     color: white;
+  //     font-size: 1.5rem; // text-2xl
+  //     cursor: pointer;
+  //     transition: opacity 0.2s ease;
+
+  //     &:hover {
+  //       opacity: 0.8; // hover:opacity-80
+  //     }
+
+  //     svg {
+  //       width: 32px;
+  //       height: 32px;
+  //     }
+  //   }
+
+  //   video {
+  //     max-width: 90vw; // max-w-[90vw]
+  //     max-height: 85vh; // max-h-[85vh]
+  //     border-radius: 1rem; // rounded-2xl
+  //     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6); // shadow-2xl equivalent
+  //     outline: none;
+  //     border: 2px solid rgba(255, 255, 255, 0.2);
+  //   }
+  // }
+}
+
+
+// !
+// $primaryColor: #4527a4;
+
+// /* --------------------------------------------------------------
+//    ROOT BLOCK
+//    -------------------------------------------------------------- */
+// .wp-block-prvg-parallax-row-video-gallery {
+//   * {
+//     box-sizing: border-box;
+//     margin: 0;
+//   }
+
+//   /* --------------------------------------------------------------
+//      Layout
+//      -------------------------------------------------------------- */
+//   .parallax-gallery {
+//     display: flex;
+//     flex-direction: column;
+//     position: relative;
+//     overflow: hidden;               // hide any overflow from the infinite loop
+//   }
+
+//   .parallax-row {
+//     position: relative;
+//     overflow: hidden;               // important – cuts off the duplicated items
+//     user-select: none;              // nicer drag experience
+//     cursor: grab;
+
+//     &:active {
+//       cursor: grabbing;
+//     }
+
+//     /* --------------------------------------------------------------
+//        Track – the moving container
+//        -------------------------------------------------------------- */
+//     .video-track {
+//       display: flex;
+//       flex-wrap: nowrap;           // never wrap
+//       will-change: transform;
+//       transition: transform 0.3s ease-out;
+
+//       /* When the user is dragging we kill the transition */
+//       .parallax-row.dragging & {
+//         transition: none;
+//       }
+//     }
+
+//     /* --------------------------------------------------------------
+//        Individual video wrapper
+//        -------------------------------------------------------------- */
+//     .video-wrapper {
+//       flex: 0 0 auto;               // never stretch/shrink
+//       margin-right: 1.5rem;         // <-- your gap – change to match design
+//       // margin-bottom for vertical orientation (if you ever use it)
+//       &:last-child {
+//         margin-right: 0;
+//       }
+//     }
+//   }
+
+//   /* --------------------------------------------------------------
+//      Video Player (the component you already have)
+//      -------------------------------------------------------------- */
+//   .video-player {
+//     position: relative;
+//     width: 100%;
+//     height: 100%;
+//     border-radius: 0.75rem;
+//     overflow: hidden;
+//     cursor: pointer;
+//     transition:
+//       transform 0.3s ease,
+//       box-shadow 0.3s ease;
+
+//     &:hover,
+//     &.hovered {
+//       transform: scale(1.03);
+//       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+//     }
+
+//     .video-element {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//       display: block;
+//     }
+
+//     /* Gradient overlay (optional – uncomment if you want it) */
+//     .video-gradient {
+//       position: absolute;
+//       inset: 0;
+//       background: linear-gradient(
+//         to top,
+//         rgba(0, 0, 0, 0.7),
+//         transparent 50%
+//       );
+//       pointer-events: none;
+//     }
+
+//     /* --------------------------------------------------------------
+//        Play overlay
+//        -------------------------------------------------------------- */
+//     .overlay {
+//       position: absolute;
+//       inset: 0;
+//       background: rgba(0, 0, 0, 0.35);
+//       opacity: 0;
+//       transition: opacity 0.25s ease;
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+
+//       &.visible {
+//         opacity: 1;
+//       }
+
+//       .play-button {
+//         width: 4rem;
+//         height: 4rem;
+//         background: rgba(255, 255, 255, 0.2);
+//         backdrop-filter: blur(6px);
+//         border-radius: 50%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         transition:
+//           background 0.25s ease,
+//           transform 0.25s ease;
+
+//         &:hover {
+//           background: rgba(255, 255, 255, 0.3);
+//           transform: scale(1.1);
+//         }
+
+//         .icon {
+//           width: 2rem;
+//           height: 2rem;
+//           color: white;
+
+//           &.play-offset {
+//             margin-left: 0.25rem;
+//           }
+//         }
+//       }
+//     }
+
+//     /* --------------------------------------------------------------
+//        Title / subtitle
+//        -------------------------------------------------------------- */
+//     .info {
+//       position: absolute;
+//       left: 0;
+//       right: 0;
+//       bottom: 0;
+//       padding: 1rem;
+//       color: white;
+//       transition: all 0.4s ease;
+
+//       &.visible {
+//         opacity: 1;
+//         transform: translateY(0);
+//       }
+
+//       &.hidden {
+//         opacity: 0;
+//         transform: translateY(1rem);
+//         pointer-events: none;
+//       }
+
+//       .title {
+//         font-weight: 600;
+//         font-size: 1.125rem;
+//         margin-bottom: 0.25rem;
+//         text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+//       }
+
+//       .subtitle {
+//         font-size: 0.875rem;
+//         color: #e5e7eb;
+//         text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+//       }
+//     }
+
+//     /* --------------------------------------------------------------
+//        Controls (mute / fullscreen / progress)
+//        -------------------------------------------------------------- */
+//     .controls {
+//       position: absolute;
+//       top: 0.75rem;
+//       right: 0.75rem;
+//       display: flex;
+//       gap: 0.5rem;
+//       z-index: 2;
+
+//       .control-button {
+//         width: 2rem;
+//         height: 2rem;
+//         background: rgba(0, 0, 0, 0.5);
+//         backdrop-filter: blur(6px);
+//         border: none;
+//         border-radius: 50%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         cursor: pointer;
+//         transition: background 0.25s ease;
+
+//         &:hover {
+//           background: rgba(0, 0, 0, 0.7);
+//         }
+
+//         .icon-small {
+//           width: 1rem;
+//           height: 1rem;
+//           color: white;
+//         }
+//       }
+//     }
+
+//     .progress-container {
+//       position: absolute;
+//       bottom: 0;
+//       left: 0;
+//       right: 0;
+//       height: 0.25rem;
+//       cursor: pointer;
+
+//       .progress-bg {
+//         position: absolute;
+//         inset: 0;
+//         background: rgba(255, 255, 255, 0.2);
+//       }
+
+//       .progress-bar {
+//         height: 100%;
+//         background: $primaryColor;
+//         transition: width 0.1s linear;
+//       }
+//     }
+//   }
+
+//   /* --------------------------------------------------------------
+//      Lightbox (your existing VideoLightbox component)
+//      -------------------------------------------------------------- */
+//   .lightbox-overlay {
+//     position: fixed;
+//     inset: 0;
+//     background: rgba(0, 0, 0, 0.95);
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     z-index: 9999;
+//     backdrop-filter: blur(8px);
+//     animation: fadeIn 0.3s ease-out;
+//   }
+
+//   .lightbox-content {
+//     position: relative;
+//     max-width: 90vw;
+//     max-height: 85vh;
+//   }
+
+//   .lightbox-video {
+//     width: 100%;
+//     max-height: 80vh;
+//     border-radius: 1rem;
+//     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+//     outline: none;
+//     border: 2px solid rgba(255, 255, 255, 0.2);
+//   }
+
+//   .lightbox-close {
+//     position: absolute;
+//     top: -12px;
+//     right: -12px;
+//     width: 36px;
+//     height: 36px;
+//     background: white;
+//     color: #111;
+//     border: none;
+//     border-radius: 50%;
+//     font-size: 1.5rem;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     cursor: pointer;
+//     transition: transform 0.2s ease;
+
+//     &:hover {
+//       transform: scale(1.1);
+//     }
+//   }
+
+//   @keyframes fadeIn {
+//     from { opacity: 0; }
+//     to   { opacity: 1; }
+//   }
+
+//   /* --------------------------------------------------------------
+//      Editing highlight (WordPress block editor)
+//      -------------------------------------------------------------- */
+//   // .bPlNowEditing {
+//   //   outline: 3px solid $primaryColor;
+//   //   outline-offset: 2px;
+//   // }
+
+//   /* --------------------------------------------------------------
+//      Responsive tweaks
+//      -------------------------------------------------------------- */
+//   @media (max-width: 640px) {
+//     .parallax-row .video-wrapper {
+//       margin-right: 1rem;
+//     }
+//     .video-player .info {
+//       padding: 0.75rem;
+//     }
+//   }
+// }
