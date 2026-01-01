@@ -12,7 +12,7 @@ export const dashboardInfo = (info) => {
       "A lightweight Gutenberg block plugin for WordPress that lets you easily create responsive video galleries with albums, filters, captions, and lightbox support. Showcase YouTube, Vimeo, Wistia, or self-hosted videos in a lightbox grid layout directly in the block editor.",
     slug,
     logo: `https://ps.w.org/${slug}/assets/icon-128x128.png`,
-    banner: `https://i.ibb.co/cXD0dPY3/video-gallery-block.gif`,
+    banner: `https://templates.bplugins.com/wp-content/uploads/2026/01/Video-Gallery-Block_Block_Insert.gif`,
     // banner: `https://ps.w.org/${slug}/assets/banner-772x250.png`,
     // video: "https://www.youtube.com/watch?v=milYZrqLJsE",
     isYoutube: true,
@@ -276,15 +276,14 @@ export const pricingInfo = {
   ],
 
   features: [
-    "Add videos from YouTube, Vimeo, Wistia, or files",
     "Use custom poster images for previews",
     "Add titles, subtitles, and captions",
+    "Add videos from YouTube, Vimeo, Wistia, or files",
     "Show star ratings for reviews",
     "Group videos into albums",
     "Choose from multiple gallery styles",
     "Use sliders, carousels, lightboxes, and more",
     "Adjust columns, rows, and spacing",
-    "Add optional headers and subheaders",
     "Customize video size and play button",
     "Style navigation arrows, dots, and thumbnails",
     "Optimize galleries for desktop, tablet, and mobile",
@@ -294,7 +293,7 @@ export const pricingInfo = {
     label: "Buy Now ➜",
   },
   featured: {
-    text: "",
+    // text: "",
     // text: "Best Value",
   },
 };
@@ -357,47 +356,47 @@ export const filterDemoInfo = {
     {
       title: "Default",
       categories: ["default"],
-      url: "https://i.ibb.co/B532hWtN/Video-Gallery-Demo-Default-min.png",
+      url: "https://templates.bplugins.com/wp-content/uploads/2026/01/Video-Gallery-Block_Video-Gallery_Demo_Default.png",
     },
     {
       title: "Video Testimonial Section",
       categories: ["videoTestimonialSection"],
-      url: "https://i.ibb.co/KjDJBLxg/Video-Testimonial-Section-Demo-1-min.png",
+      url: "https://templates.bplugins.com/wp-content/uploads/2026/01/Video-Gallery-Block_Video_Testimonial_Section_Demo_1.png",
     },
     {
       title: "Parallax Row Video Gallery",
       categories: ["parallaxRowVideoGallery"],
-      url: "https://i.ibb.co/ccY3mX0j/Parallax-Row-Video-Gallery-Demo-2-min.png",
+      url: "https://templates.bplugins.com/wp-content/uploads/2026/01/Video-Gallery-Block_Parallax_Row_Video_Gallery_Demo_2.png",
     },
     {
       title: "Video Slider",
       categories: ["videoSlider"],
-      url: "https://i.ibb.co/HDjnG2w1/Video-Slider-Demo-3-min.png",
+      url: "https://templates.bplugins.com/wp-content/uploads/2026/01/Video-Gallery-Block_Video_Slider_Demo_3.png",
     },
     {
       title: "Slider Autoplay Video",
       categories: ["sliderAutoplayVideo"],
-      url: "https://i.ibb.co/d0LpH2PB/Slider-Autoplay-Video-Demo-4-min.png",
+      url: "https://templates.bplugins.com/wp-content/uploads/2026/01/Video-Gallery-Block_Slider_Autoplay_Video_Demo_4.png",
     },
     {
       title: "Lightbox Gallery",
       categories: ["lightboxGallery"],
-      url: "https://i.ibb.co/DDsv3w6K/Lightbox-Video-Gallery-Demo-5-min.png",
+      url: "https://templates.bplugins.com/wp-content/uploads/2026/01/Video-Gallery-Block_Lightbox_Video_Gallery_Demo_5.png",
     },
     {
       title: "Masonry Video Grid",
       categories: ["masonryVideoGrid"],
-      url: "https://i.ibb.co/jPyPLxXt/Masonry-Video-Grid-Demo-6-min.png",
+      url: "https://templates.bplugins.com/wp-content/uploads/2026/01/Video-Gallery-Block_Masonry_Video_Grid_Demo_6.png",
     },
     {
       title: "Video Playlist Gallery",
       categories: ["videoPlaylistGallery"],
-      url: "https://i.ibb.co/6cvQWFgH/Video-Playlist-Gallery-Demo-7-min.png",
+      url: "https://templates.bplugins.com/wp-content/uploads/2026/01/Video-Gallery-Block_Video_Playlist_Gallery_Demo_7.png",
     },
     {
       title: "Video Carousel Gallery",
       categories: ["videoCarouselGallery"],
-      url: "https://i.ibb.co/spJndDYB/Video-Carousel-Gallery-Demo-8-min.png",
+      url: "https://templates.bplugins.com/wp-content/uploads/2026/01/Video-Gallery-Block_Video_Carousel_Gallery_Demo_8.png",
     },
   ],
 };
