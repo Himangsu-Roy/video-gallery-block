@@ -1949,9 +1949,17 @@ const VideoLightbox = ({
       setTouchEnd(0);
     }
   };
+
+  // Handle click outside video to close lightbox
+  const handleBackgroundClick = e => {
+    if (e.target.classList.contains("vcg-lightbox") || e.target.classList.contains("vcg-lightbox-content")) {
+      onClose();
+    }
+  };
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "vcg-lightbox",
     ref: lightboxRef,
+    onClick: handleBackgroundClick,
     onTouchStart: handleTouchStart,
     onTouchMove: handleTouchMove,
     onTouchEnd: handleTouchEnd,
