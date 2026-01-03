@@ -40,6 +40,8 @@ class VCG_WooCommerce_Integration {
 	private function __construct() {
 		add_action( 'rest_api_init', array( $this, 'register_rest_routes' ) );
 		add_action( 'admin_notices', array( $this, 'woocommerce_dependency_notice' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_scripts' ) );
+		add_action( 'wp_ajax_vcg_dismiss_woocommerce_notice', array( $this, 'dismiss_woocommerce_notice' ) );
 	}
 
 	/**
@@ -56,10 +58,16 @@ class VCG_WooCommerce_Integration {
 	 */
 	public function woocommerce_dependency_notice() {
 		if ( ! $this->is_woocommerce_active() ) {
+			// Check if the user has dismissed the notice.
+			$user_id = get_current_user_id();
+			if ( get_user_meta( $user_id, 'vcg_dismissed_woocommerce_notice', true ) ) {
+				return;
+			}
+
 			$screen = get_current_screen();
 			if ( $screen && ( 'post' === $screen->base || 'edit' === $screen->base ) ) {
 				?>
-				<div class="notice notice-warning is-dismissible">
+				<div class="notice notice-warning is-dismissible" data-notice="woocommerce-dependency">
 					<p>
 						<?php
 						echo wp_kses_post(
@@ -75,6 +83,35 @@ class VCG_WooCommerce_Integration {
 				<?php
 			}
 		}
+	}
+
+	/**
+	 * Enqueue admin scripts.
+	 */
+	public function enqueue_admin_scripts() {
+		if ( ! $this->is_woocommerce_active() ) {
+			wp_enqueue_script( 'vcg-admin-notice', VGB_DIR_URL . 'public/js/admin-notice.js', array( 'jquery' ), VGB_PLUGIN_VERSION, true );
+			wp_localize_script(
+				'vcg-admin-notice',
+				'vcg_admin_notice',
+				array(
+					'ajax_url' => admin_url( 'admin-ajax.php' ),
+					'nonce'    => wp_create_nonce( 'vcg_dismiss_woocommerce_notice_nonce' ),
+				)
+			);
+		}
+	}
+
+	/**
+	 * Dismiss WooCommerce dependency notice via AJAX.
+	 */
+	public function dismiss_woocommerce_notice() {
+		check_ajax_referer( 'vcg_dismiss_woocommerce_notice_nonce', 'nonce' );
+
+		$user_id = get_current_user_id();
+		update_user_meta( $user_id, 'vcg_dismissed_woocommerce_notice', true );
+
+		wp_send_json_success();
 	}
 
 	/**

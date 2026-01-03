@@ -5,7 +5,7 @@ import Header from "../../../../bpl-tools/Admin/Header/Header";
 const navigation = [
   { name: "Welcome", href: "/welcome" },
   // { name: "Demos", href: "/demos" },
-  { name: "Demos", href: "/filter-demos" },
+  { name: "Pro Version Demo", href: "/filter-demos" },
   { name: "Pricing", href: "/pricing" },
   // { name: "Purchase", href: "/purchase" },
   // { name: "Feature Comparison", href: "/feature-comparison" },
@@ -23,9 +23,12 @@ const Layout = (props) => {
             ?.filter(
               (item) =>
                 !isPremium ||
-                !["/purchase", "/pricing", "/feature-comparison"].includes(
-                  item.href
-                )
+                ![
+                  "/purchase",
+                  "/pricing",
+                  "/feature-comparison",
+                  "/filter-demos",
+                ].includes(item.href)
             ) // Hide link for premium users
             ?.map((item, index) => (
               <Link
@@ -33,8 +36,7 @@ const Layout = (props) => {
                 to={item.href}
                 className={`navLink ${
                   location.pathname === item.href ? "active" : ""
-                }`}
-              >
+                }`}>
                 {item.name}
               </Link>
             ))}

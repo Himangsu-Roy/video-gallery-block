@@ -126,7 +126,7 @@ if (function_exists('vgb_fs')) {
 add_filter('block_categories_all', function ($categories, $post) {
     array_unshift($categories, [
         'slug'  => 'videoblocks',
-        'title' => __('Video Blocks', 'video-gallery-block'),
+        'title' => __('Video Gallery', 'video-gallery-block'),
         'icon'  => 'video-alt',
     ]);
     return $categories;

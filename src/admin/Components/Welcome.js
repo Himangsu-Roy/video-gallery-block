@@ -9,15 +9,14 @@ const Welcome = (props) => {
 
   return (
     <>
-      <Overview {...props}>
+      <Overview {...props} isPremium={isPremium}>
         {!isPremium && (
           <Button
             variant="secondary"
             onClick={(e) => {
               e.preventDefault();
               window.location.hash = "#/pricing";
-            }}
-          >
+            }}>
             Buy Now
           </Button>
         )}
