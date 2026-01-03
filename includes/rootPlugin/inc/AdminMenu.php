@@ -9,11 +9,11 @@ class AdminMenu  {
 
     function adminMenu(){
 		add_submenu_page(
-            'edit.php?post_type=video-gallery-block', // ✅ CPT menu
+            'edit.php?post_type=video-gallery-block', // CPT menu
             __('Help - bPlugins', 'video-gallery'),
             __('Help & Demo', 'video-gallery'),
             'manage_options',
-            'vgb-help-demo', // ✅ unique slug
+            'vgb-help-demo', // unique slug
             [$this, 'renderDashboardPage']
         );
     }
